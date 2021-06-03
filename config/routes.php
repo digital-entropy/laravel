@@ -14,6 +14,7 @@ return [
 
     'web' => [
         App\Http\Routes\DefaultRoute::class,
+        App\Http\Controllers\DashboardController::class,
         /** @inject web **/
     ],
     'api' => [
