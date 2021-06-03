@@ -14,7 +14,7 @@ class DeleteAccountTest extends TestCase
     public function test_user_accounts_can_be_deleted()
     {
         if (! Features::hasAccountDeletionFeatures()) {
-            return $this->markTestSkipped('Account deletion is not enabled.');
+            return static::markTestSkipped('Account deletion is not enabled.');
         }
 
         $this->actingAs($user = User::factory()->create());
@@ -23,13 +23,13 @@ class DeleteAccountTest extends TestCase
             'password' => 'password',
         ]);
 
-        $this->assertNull($user->fresh());
+        static::assertNull($user->fresh());
     }
 
     public function test_correct_password_must_be_provided_before_account_can_be_deleted()
     {
         if (! Features::hasAccountDeletionFeatures()) {
-            return $this->markTestSkipped('Account deletion is not enabled.');
+            return static::markTestSkipped('Account deletion is not enabled.');
         }
 
         $this->actingAs($user = User::factory()->create());
@@ -38,6 +38,6 @@ class DeleteAccountTest extends TestCase
             'password' => 'wrong-password',
         ]);
 
-        $this->assertNotNull($user->fresh());
+        static::assertNotNull($user->fresh());
     }
 }

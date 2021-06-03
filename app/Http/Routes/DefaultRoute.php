@@ -12,7 +12,6 @@ use Inertia\Inertia;
 
 class DefaultRoute extends BaseRoute
 {
-
     /**
      * Register routes handled by this class.
      *
@@ -25,7 +24,7 @@ class DefaultRoute extends BaseRoute
 
         $this->router->get('/', [
             'as' => $this->name('default'),
-            'uses' => fn() => Inertia::render('Welcome', [
+            'uses' => fn () => Inertia::render('Welcome', [
                 'canLogin' => Route::has('login'),
                 'canRegister' => Route::has('register'),
                 'laravelVersion' => Application::VERSION,
