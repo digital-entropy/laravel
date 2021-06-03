@@ -17,7 +17,7 @@ services:
     build:
       context: docker/image
       args:
-        - USER_CONTAINER=${USER_CONTAINER}
+        - USER_CONTAINER=${DOCKER_USER}
         - PUID=${DOCKER_PUID}
         - PGID=${DOCKER_PGID}
     restart: unless-stopped
