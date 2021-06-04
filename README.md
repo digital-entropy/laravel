@@ -4,11 +4,6 @@ Laravel project customized stack by DigitalEntropy.
 
 ### Requirements : 
  - Docker 
-   <br>or <br>
- - PHP 8
- - Swoole Extensions
- - NodeJS 14 or newer
-   
 
 ### Quick Start :
 ```shell
