@@ -19,8 +19,7 @@ class DefaultRoute extends BaseRoute
      */
     public function register(): void
     {
-        $this->registerRateLimiter();
-        $this->registerBindingRoute();
+        $this->callPreRouting();
 
         $this->router->get('/', [
             'as' => $this->name('default'),
@@ -31,6 +30,12 @@ class DefaultRoute extends BaseRoute
                 'phpVersion' => PHP_VERSION,
             ])
         ]);
+    }
+
+    public function callPreRouting(): void
+    {
+        $this->registerRateLimiter();
+        $this->registerBindingRoute();
     }
 
     private function registerRateLimiter(): void

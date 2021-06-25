@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Routes\DefaultRoute;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if ($this->app->routesAreCached()) {
+            $this->app->call(DefaultRoute::class.'@'.'callPreRouting');
+        }
     }
 }
