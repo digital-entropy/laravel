@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "dentro/nge.noob",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "The Laravel Framework customized by Digital Entropy.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {

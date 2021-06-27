@@ -5,6 +5,7 @@ set -o errexit    # Used to exit upon error, avoiding cascading errors
 IFS=$'\n\t'
 
 # read .env file
+# shellcheck disable=SC1090
 source <(grep -v '^#' .env | sed -E 's|^(.+)=(.*)$|: ${\1=\2}; export \1|g')
 
 # usage: file_env VAR [DEFAULT]
@@ -38,6 +39,9 @@ install() {
     printf "\n\n${YELLOW}[core]${NC} run post installation script...\n"
     composer run post-root-package-install
     printf "\n\n${YELLOW}[core]${NC} put application under maintenance...\n"
+    if [[ -z "$APP_KEY" ]]; then
+        artisan key:generate
+    fi
     artisan down
     printf "\n\n${YELLOW}[core]${NC} running database migration and seeders...\n"
     artisan migrate --seed
@@ -47,7 +51,6 @@ install() {
     printf "\n\n${BLUE}[app]${NC} building node packages...\n"
     npm install
     npm run production
-
 }
 
 composer() {

@@ -7,8 +7,6 @@ Laravel project customized stack by DigitalEntropy.
 
 ### Quick Start :
 ```shell
-cp .env.example .env
-./nge artisan key:generate
 ./nge install
 ./nge up
 ```
@@ -17,5 +15,5 @@ open https://localhost:8000 in your favorite browser.
 ### FAQ : 
 
 > Q : where is routes folder ?. <br>
-> A : we replace default laravel router with our own custom route [here](https://github.com/digital-entropy/yalr). 
-> you can saw all the routes in config/routes.php  
+> A : we replace default laravel router with our custom route [here](https://github.com/digital-entropy/yalr). 
+> you can see all the routes in config/routes.php  
