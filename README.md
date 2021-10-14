@@ -6,6 +6,7 @@ Laravel project customized stack by DigitalEntropy.
 ![GitHub contributors](https://img.shields.io/github/contributors/digital-entropy/nge.noob)
 ![Visitor](https://visitor-badge.laobi.icu/badge?page_id=digital-entropy.nge.noob)
 [![GitHub forks](https://badgen.net/github/forks/digital-entropy/nge.noob/)](https://github.com/digital-entropy/nge.noob/network/)
+[![GitHub commits](https://badgen.net/github/commits/digital-entropy/nge.noob/)](hhttps://github.com/digital-entropy/nge.noob/commits/)
 
 ### Requirements : 
  - Docker
