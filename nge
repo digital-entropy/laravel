@@ -5,8 +5,7 @@ set -o errexit    # Used to exit upon error, avoiding cascading errors
 IFS=$'\n\t'
 
 # check .env file if exist and not exist
-file = .env
-if [! -e "$file" ]; then
+if [! -f .env ]; then
     cp .env.example .env
 else
     echo "File .env Exist"
