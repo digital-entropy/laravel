@@ -1,6 +1,4 @@
-<h1 align="center">بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ</h1>
-<h1 align="center">Nge (Noob Edition)</h1>
-
+<h1 align="center">Nge (Noob Edition)</h1>  
 Laravel project customized stack by DigitalEntropy.
 
 ![GitHub contributors](https://img.shields.io/github/contributors/digital-entropy/nge.noob)
