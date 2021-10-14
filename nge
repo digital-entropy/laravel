@@ -1,15 +1,15 @@
+# check .env file if exist and not exist
+if [ ! -f .env ]; then
+    cp .env.example .env
+else
+    echo "File .env Exist"
+fi 
+
 #!/bin/bash
 set -Eeo pipefail
 set -o errexit    # Used to exit upon error, avoiding cascading errors
 
 IFS=$'\n\t'
-
-# check .env file if exist and not exist
-if [! -f .env ]; then
-    cp .env.example .env
-else
-    echo "File .env Exist"
-fi 
 
 # read .env file
 # shellcheck disable=SC1090
