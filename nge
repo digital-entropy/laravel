@@ -4,6 +4,14 @@ set -o errexit    # Used to exit upon error, avoiding cascading errors
 
 IFS=$'\n\t'
 
+# check .env file if exist and not exist
+file = .env
+if [! -e "$file" ]; then
+    cp .env.example .env
+else
+    echo "File .env Exist"
+fi 
+
 # read .env file
 # shellcheck disable=SC1090
 source <(grep -v '^#' .env | sed -E 's|^(.+)=(.*)$|: ${\1=\2}; export \1|g')
