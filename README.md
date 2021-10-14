@@ -13,7 +13,7 @@ Laravel project customized stack by DigitalEntropy.
 ./nge up
 ```
 open https://localhost:8000 in your favorite browser.
-
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=digital-entropy&layout=compact)
 ### FAQ : 
 
 > Q : where is routes folder ?. <br>
